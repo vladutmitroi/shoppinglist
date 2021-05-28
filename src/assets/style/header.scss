@@ -1,0 +1,24 @@
+header,
+footer {
+  color: $white;
+  background-color: $c-primary;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font: $font-size-large "Bree Serif", serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+.sign-out-btn {
+  position: absolute;
+  right: 0;
+}
+.link-text {
+  font-size: $font-size-small;
+  display: inline-block;
+  margin-left: 5px;
+}

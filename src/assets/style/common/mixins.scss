@@ -1,0 +1,83 @@
+@mixin main-container-appereance {
+  width: 100%;
+  height: 100%;
+  background: $grey;
+  padding: 20px 20px 80px;
+  overflow-y: auto;
+}
+
+@mixin remove-button-appereance {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  transition: $default-transition;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  position: relative;
+  outline: none;
+}
+
+@mixin box-shadow-0-withblur($blur, $color) {
+  box-shadow: 0 0 $blur $color;
+}
+
+@mixin card-title-appereance {
+  font-size: $font-size-small;
+  color: $dark-grey;
+  margin: 15px 0;
+}
+
+@mixin animationEase($name, $duration) {
+  animation: $name $duration ease;
+  -webkit-animation: $name $duration ease;
+}
+
+@mixin product-card-appereance {
+  [class*="-products"]:not([class*="-item"]) {
+    background: $white;
+    @include box-shadow-0-withblur(2px, $c-primary-darker-half-opacity);
+
+    border-radius: 10px;
+    margin: 0 0 20px;
+  }
+
+  [class*="-name"] {
+    @include card-title-appereance;
+  }
+  [class*="-item"] {
+    padding: 7px 15px 7px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: $default-transition;
+
+    &:hover,
+    &:focus {
+      @include animationEase(boxShadowOnHover, 2s);
+    }
+
+    i.right {
+      margin-left: auto;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      padding: 5px;
+      @include animationEase(absoluteIconScale, 1s);
+    }
+  }
+}
+
+@mixin align-center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin webkitVhFixHomepage {
+  height: -webkit-fill-available;
+  min-height: calc(100vh - 60px);
+}

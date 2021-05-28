@@ -1,0 +1,69 @@
+.homepage {
+  width: 100%;
+  background-image: url("../img/shoppilist.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+}
+.dashboard-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 60px);
+
+  &-btn {
+    @include remove-button-appereance;
+    background: $primary-half-opacity;
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    width: 205px;
+
+    &:hover,
+    &:focus {
+      background: $c-primary-darker-half-opacity;
+
+      .dashboard-links-text {
+        background: $c-primary-lighter;
+        color: $white;
+      }
+
+      i {
+        transform: rotate(360deg);
+      }
+    }
+
+    i {
+      transition: $default-transition;
+      font-size: $font-size-large;
+    }
+  }
+
+  &-text {
+    background: $white;
+    border-radius: 20px;
+    color: $c-primary;
+    font-weight: $font-weight-bold;
+    padding: 15px;
+    transition: $default-transition;
+    width: 100%;
+  }
+}
+
+@media (min-width: 993px) {
+  .dashboard-links {
+    justify-content: space-around;
+    flex-direction: row;
+
+    &-btn {
+      width: 245px;
+      padding: 40px;
+    }
+
+    &-text {
+      padding: 15px 30px;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.history-page-list {
+  background: $white;
+  @include box-shadow-0-withblur(2px, $c-primary-darker-half-opacity);
+  border-radius: 10px 10px 0 10px;
+
+  &--headings {
+    background: $c-primary-darker-half-opacity;
+    color: $white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+
+    h3 {
+      flex-basis: 0;
+      flex-grow: 1;
+      margin: 0;
+      font-size: $font-size-medium;
+    }
+  }
+
+  &--card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+    li {
+      flex: 1;
+      list-style: none;
+    }
+  }
+
+  .total {
+    background: $c-primary-darker-half-opacity;
+    color: $white;
+    font-size: $font-size-medium;
+    padding: 5px 15px;
+    border-radius: 0 0 10px 10px;
+  }
+}

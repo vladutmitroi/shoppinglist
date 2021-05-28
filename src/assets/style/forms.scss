@@ -1,0 +1,106 @@
+#root {
+  .sign-in-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+    .input-field {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+
+  form {
+    width: 100%;
+    display: block;
+    label {
+      transform: none;
+      top: 10px;
+      font-size: $font-size-small;
+      &:after {
+        display: none;
+      }
+      &::before {
+        transition: $default-transition;
+      }
+    }
+    .total-icon {
+      &:before {
+        content: "\f155";
+      }
+    }
+    .location-icon {
+      &:before {
+        content: "\f3c5";
+      }
+    }
+    .password-icon {
+      &:before {
+        content: "\f023";
+      }
+    }
+    .email-icon {
+      &:before {
+        content: "\f0e0";
+      }
+    }
+  }
+
+  .submit-pending-list-form {
+    margin-top: 40px;
+    background: $white;
+    border-radius: 10px;
+    padding: 20px 10px 10px;
+    @include box-shadow-0-withblur(2px, $c-primary-darker-half-opacity);
+
+    .row {
+      margin-bottom: 20px;
+
+      .input-field {
+        margin: 0;
+      }
+    }
+
+    .primary-btn {
+      border-radius: 10px;
+    }
+  }
+
+  .add-product-form {
+    padding: 20px;
+
+    &--wrap {
+      background: $white;
+      border-radius: 10px;
+      padding: 15px;
+      @include box-shadow-0-withblur(2px, $c-primary-darker-half-opacity);
+
+      .row {
+        margin-bottom: 5px;
+
+        .input-field {
+          margin: 0;
+        }
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0 2px;
+      margin: 20px 0;
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+
+    &--title {
+      @include card-title-appereance;
+      i {
+        margin-left: 10px;
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}

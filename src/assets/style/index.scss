@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@400;600;700&display=swap");
+
+@import "./common/colors";
+@import "./common/variables";
+@import "./common/helpers";
+@import "./common/mixins";
+@import "./common/animations";
+
+@import "./basic";
+@import "./forms";
+@import "./buttons";
+@import "./header";
+@import "./footer";
+@import "./main";
+@import "./dashboard";
+@import "./categories";
+@import "./pendingList";
+@import "./history";

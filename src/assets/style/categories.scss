@@ -1,0 +1,120 @@
+::-webkit-scrollbar {
+  display: none;
+}
+.category-list {
+  width: 100%;
+  height: 120px;
+  display: inline-block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  position: relative;
+  padding: 0 25px;
+  @include animationEase(leftToRightScale, 1s);
+
+  &--btn {
+    &.cleaning {
+      background: linear-gradient(to bottom, #e8cbc0, #636fa4);
+    }
+
+    &.fruits-and-vegetables {
+      background: linear-gradient(
+        to bottom,
+        rgb(0, 176, 155),
+        rgb(150, 201, 61)
+      );
+    }
+
+    &.beverages {
+      background: linear-gradient(
+        to bottom,
+        rgb(156, 236, 251),
+        rgb(101, 199, 247),
+        rgb(0, 82, 212)
+      );
+    }
+
+    &.pampering {
+      background: linear-gradient(
+        to bottom,
+        rgb(127, 127, 213),
+        rgb(134, 168, 231),
+        rgb(145, 234, 228)
+      );
+    }
+
+    &.spices-cooking-more {
+      background: linear-gradient(
+        to bottom,
+        rgb(101, 153, 153),
+        rgb(244, 121, 31)
+      );
+    }
+
+    &.pastry {
+      background: linear-gradient(
+        to bottom,
+        rgb(243, 144, 79),
+        rgb(59, 67, 113)
+      );
+    }
+
+    &.meat {
+      background: linear-gradient(
+        to bottom,
+        rgb(225, 238, 195),
+        rgb(240, 80, 83)
+      );
+    }
+
+    &.dairy-eggs {
+      background: linear-gradient(
+        to bottom,
+        rgb(238, 205, 163),
+        rgb(239, 98, 159)
+      );
+    }
+
+    &.snacks {
+      background: linear-gradient(
+        to bottom,
+        rgb(89, 193, 115),
+        rgb(161, 127, 224),
+        rgb(93, 38, 193)
+      );
+    }
+  }
+}
+
+.category-card {
+  margin: 20px 0;
+  padding: 0 20px;
+  @include product-card-appereance;
+
+  &--products {
+    &-item {
+      &.added {
+        color: $dark-grey;
+
+        i::before {
+          content: "\f1f8";
+          opacity: 0.6;
+          color: $red;
+        }
+      }
+
+      i {
+        color: $c-primary;
+
+        &:hover::before,
+        &:focus::before {
+          opacity: 1;
+        }
+
+        &::before {
+          transition: $default-transition;
+          content: "\f067";
+        }
+      }
+    }
+  }
+}

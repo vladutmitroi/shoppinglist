@@ -1,0 +1,55 @@
+.pending-list-page {
+  .pending-card {
+    margin-bottom: 15px;
+    @include product-card-appereance;
+
+    .category-title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      &-icon {
+        margin-left: 10px;
+        font-size: $font-size-small;
+      }
+    }
+
+    &--products-item {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        opacity: 0;
+        top: 55%;
+        left: 15px;
+        transform: translateY(-50%);
+        opacity: 1;
+        height: 2px;
+        background: linear-gradient(90deg, $c-primary 29%, $white 88%);
+
+        transition: all 0.2s ease;
+      }
+
+      i {
+        font-size: $font-size-xsmall;
+        color: $c-primary;
+        border: 1px solid $c-primary;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+        color: transparent;
+      }
+
+      &.checked {
+        &::after {
+          width: calc(100% - 60px);
+          opacity: 1;
+        }
+        i {
+          color: $c-primary;
+        }
+      }
+    }
+  }
+  .col.s12.input-field {
+    padding: 0;
+  }
+}

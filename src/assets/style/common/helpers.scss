@@ -1,0 +1,64 @@
+// spacers - margin
+.m-0 {
+  margin: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.m-y-10 {
+  margin: 10px 0;
+}
+.m-y-20 {
+  margin: 20px 0;
+}
+.m-t-15 {
+  margin-top: 15px;
+}
+
+// spacers - padding
+.p-0 {
+  padding: 0;
+}
+.p-l-5 {
+  padding-left: 5px;
+}
+.p-15 {
+  padding: 15px;
+}
+.p-r-15 {
+  padding-right: 15px;
+}
+
+// layout
+.d-block {
+  display: block;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.v-align-middle {
+  vertical-align: middle;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// text
+.uppercase {
+  text-transform: uppercase;
+}
+.white-color {
+  color: $white;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+// buttons & inputs
+.b-r-10 {
+  border-radius: 10px;
+}

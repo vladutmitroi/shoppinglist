@@ -1,0 +1,13 @@
+{
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/dist": true,
+    "**/dist-style": true
+  },
+  "workbench.editor.enablePreview": false,
+  "typescript.suggest.paths": false
+}

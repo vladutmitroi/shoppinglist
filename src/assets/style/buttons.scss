@@ -1,0 +1,92 @@
+.primary-btn {
+  @include remove-button-appereance;
+  width: 100%;
+  background-color: $c-primary;
+  color: $white;
+  &:not(:disabled)::before {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    height: 2px;
+    visibility: hidden;
+    transition: $default-transition;
+    background: $white;
+  }
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: $c-primary-darker;
+    &::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+}
+
+.btn-no-text {
+  @include remove-button-appereance;
+  color: $white;
+  font-size: 2rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-green;
+    background-color: transparent;
+  }
+
+  .pending-list-notification {
+    width: 1px;
+    height: 1px;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      width: 1px;
+      color: $red;
+      height: 1px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.category-list--btn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: $white;
+  font-size: $font-size-large;
+  margin: 30px 20px 0 0;
+  border: none;
+  cursor: pointer;
+  transition: $default-transition;
+  position: relative;
+
+  i {
+    @include align-center-absolute;
+    transition: $default-transition;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(2px);
+    @include box-shadow-0-withblur(12px, $c-primary-darker-half-opacity);
+  }
+
+  &.active {
+    @include box-shadow-0-withblur(12px, $c-primary-darker-half-opacity);
+    transform: scale(1.4) rotateY(180deg);
+    i {
+      transform: translate(-50%, -50%) rotateY(180deg);
+    }
+  }
+}
+button:disabled {
+  background-color: $dark-grey;
+  opacity: 0.7;
+}

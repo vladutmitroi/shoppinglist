@@ -1,0 +1,33 @@
+.main-container {
+  @include main-container-appereance;
+
+  &.create-list-page {
+    padding: 20px 0 80px;
+  }
+
+  .muffin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+
+    i {
+      color: $c-primary;
+      animation: rotateInfinte 2s infinite ease;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container {
+    width: 60%;
+  }
+}
